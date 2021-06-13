@@ -1,0 +1,9 @@
+impor java.util.Date;
+
+public class HoraDoSistema {
+    public satatic void main(String[] args) {
+        Date relogio = new Date();
+        System.out.println("A hora do Sistema é:)
+        System.out.println(relogio.toString());
+    }
+}
