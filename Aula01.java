@@ -1,3 +1,7 @@
+/* Este foi o exercício 4 da 2ª aula do curso de Java do CINEL
+consiste em calcular a média de notas
+*/
+
 package aula01;
 
 import java.util.Scanner;
