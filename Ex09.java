@@ -1,26 +1,25 @@
-//BaseExpoente
-package aula07;
+
+package aula04;
 
 import java.util.Scanner;
 
 
 public class Ex09 {
 
-   
+    
     public static void main(String[] args) {
-        int num;
-        int exp;
-        Scanner scan = new Scanner(System.in);
         
-        System.out.println("Base: ");
-        num = scan.nextInt();
-        System.out.println("Expoente: ");
-        exp = scan.nextInt();
-        int resultado = num;
-        for (int i=1; i<exp; i++){
-            resultado *= num;
-        }
-        System.out.println("Resultado: " + resultado);
+        double fHef, cElsius;
+        
+        Scanner input = new Scanner(System.in);
+        
+        System.out.println("Introduza a temperatura: ");
+        fHef = input.nextDouble();
+        
+        cElsius = (5 * (fHef - 32) / 9);
+        
+        System.out.printf("Temperatura em celsius é: %.2f", cElsius);
+        
         
         
     }
