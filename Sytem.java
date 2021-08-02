@@ -9,13 +9,8 @@ package aula01;
  *
  * @author agton
  */
-public class Aula01 {
+class Sytem {
 
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
-        // TODO code application logic here
-    }
+    static Readable in;
     
 }
