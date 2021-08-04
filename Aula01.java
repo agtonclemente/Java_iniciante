@@ -1,21 +1,38 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package aula01;
 
-/**
- *
- * @author agton
- */
-public class Aula01 {
+import java.util.Scanner;
 
-    /**
-     * @param args the command line arguments
-     */
+public class Exercicio4 {
+
+   
     public static void main(String[] args) {
-        // TODO code application logic here
+        
+        double nota1;
+        double nota2;
+        double nota3;
+        double nota4;
+        double media;
+        
+        Scanner entrada = new Scanner(System.in);
+        //boolean nota1 = false;
+        
+        System.out.println("nota1");
+        nota1 = entrada.nextDouble();
+        
+        System.out.println("nota2");
+        nota2 = entrada.nextDouble();
+        
+        System.out.println("nota3");
+        nota3 = entrada.nextDouble();
+        
+        System.out.println("nota4");
+        nota4 = entrada.nextDouble();
+        
+        media = (nota1+nota2+nota3+nota4) / 4;
+        
+        System.out.println(media);
+        
     }
     
 }
+
