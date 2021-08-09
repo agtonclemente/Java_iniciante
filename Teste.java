@@ -1,5 +1,7 @@
-//Exe02_Aula14
-package Exe02Heranca;
+//Teste
+package Contato;
+
+import java.util.Scanner;
 
 /**
  *
@@ -7,19 +9,54 @@ package Exe02Heranca;
  */
 public class Teste {
 
-    
+   
     public static void main(String[] args) {
-        //double total = 0;
-        Produto[] produtos = new Produto[3];
+        Scanner scan = new Scanner(System.in);
+        int opcao;
+        boolean sair = false;
         
-        produtos[0] = new Produto("Produto 1", 10);
-        produtos[1] = new Peresivel("Produto 2", 20);
-        produtos[2] = new NaoPeresivel("Produto 3", 5);
-        double total = 0;
-        for(int i=0; i < produtos.length; i++) {
-            total += produtos[i].clacular(5);
+        while (!sair) {
+            System.out.println("1 - Inserir contato: ");
+            System.out.println("2 - Listar contato: ");
+            System.out.println("3 - Procurar contato: ");
+            System.out.println("4 - Existe contato: ");
+            System.out.println("5 - Eliminar contato: ");
+            System.out.println("6 - Espaço disponível: ");
+            System.out.println("7 - Sair: ");  
+            
+            try {
+                System.out.println("Escolha uma das opções: ");
+                opcao = scan.nextInt();
+                
+                switch (opcao) {
+                    case 1:
+                    break;
+                    case 2:
+                    break;
+                    case 3:
+                    break;
+                    case 4:
+                    break;
+                    case 5:
+                    break;
+                    case 6:
+                    break;
+                    case 7: 
+                    break;
+                    default:System.out.println("Insira números entre 1 e 7 ");
+                }
+                
+                catch (Exception e) {
+                        System.out.println("Insira um número: ");
+                        scan.next();
+                        }
+            }
         }
-        System.out.println("O total é: " + total);
+        
+        
+        
+        
+        
         
     }
     

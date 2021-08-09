@@ -1,5 +1,5 @@
-//ClasseContatoAula12
-package aula12;
+//Classe_Contato
+package Contato;
 
 /**
  *
@@ -7,11 +7,23 @@ package aula12;
  */
 public class Contato {
     private String nome;
-    //private String endereco;
-    private Endereco endereco;
-    //private String telefone;
-    private Telefone[] telefones;
-    
+    private int telefone;
+
+    public Contato() {
+    }
+
+    public Contato(String nome, int telefone) {
+        this.nome = nome;
+        this.telefone = telefone;
+    }
+
+    public int getTelefone() {
+        return telefone;
+    }
+
+    public void setTelefone(int telefone) {
+        this.telefone = telefone;
+    }
 
     public String getNome() {
         return nome;
@@ -20,28 +32,18 @@ public class Contato {
     public void setNome(String nome) {
         this.nome = nome;
     }
-
     
-
-    
-
-    public Endereco getEndereco() {
-        return endereco;
+    public boolean iguais(Contato c) {
+        if (this.nome.equalsIgnoreCase(c.getNome())) {
+        return true;
+    }
+        return false;
     }
 
-    public void setEndereco(Endereco endereco) {
-        this.endereco = endereco;
+    @Override
+    public String toString() {
+        return "Contato{" +"nome=" + nome + ", telefone=" + telefone + '}';
     }
-
-    public Telefone[] getTelefones() {
-        return telefones;
-    }
-
-    public void setTelefones(Telefone[] telefones) {
-        this.telefones = telefones;
-    }
-
-   
     
     
     
