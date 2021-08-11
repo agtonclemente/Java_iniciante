@@ -15,6 +15,11 @@ public class Teste {
         int opcao;
         boolean sair = false;
         
+        AgendaCont agenda = new AgendaCont(3);
+        String nome;
+        int telefone;
+        Contato c;
+        
         while (!sair) {
             System.out.println("1 - Inserir contato: ");
             System.out.println("2 - Listar contato: ");
@@ -30,6 +35,12 @@ public class Teste {
                 
                 switch (opcao) {
                     case 1:
+                        System.out.println("Nome: ");
+                        nome = scan.next();
+                        System.out.println("Telefone: ");
+                        telefone = scan.nextInt();
+                        c = new Contato(nome, telefone);
+                        agenda.inserirContato(c);
                     break;
                     case 2:
                     break;

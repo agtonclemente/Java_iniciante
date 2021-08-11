@@ -17,6 +17,11 @@ public class AgendaCont {
     }
     
     public void inserirContato(Contato c) {
+        if (existeContato(c)) {
+            System.out.println("Já existe esse nome na agenda");
+        }else if (agendaCheia()) {
+            System.out.println("Agenda cheia, não se pode inserir");
+        }else{
         boolean encontrou = false;
         
         for(int i = 0; i < contatos.length && !encontrou; i++) {
@@ -32,7 +37,7 @@ public class AgendaCont {
             System.out.println("Contato não inserido");
         }       
     }
-    
+    }
     public boolean existeContato (Contato c) {
         for (int i = 0; i < contatos.length; i++) {
             if (contatos[i] != null && c.iguais(contatos[i])) {
@@ -64,5 +69,41 @@ public class AgendaCont {
         if (!encontrou) {
             System.out.println("não se encontrou o contato.");
         }
+    }
+    
+    public boolean agendaCheia () {
+        for (int i = 0; i < contatos.length; i++) {
+            if (contatos == null) {
+                return false;
+            }
+        }
+        
+        return true;
+    }
+    
+    public void eliminarContato (Contato c) {
+        for (int i = 0; i < contatos.length; i++) {
+            if (contatos[i] != null && contatos[i].iguais(c)) {
+                contatos[i] = null;
+                boolean encontrou = true;
+            }
+        }
+        boolean encontrou = false;
+        
+        if (encontrou) {
+            System.out.println("Contato eliminado");
+        }else{
+            System.out.println("Contato não eliminado");
+        }
+    }
+    
+    public int espacoLivre() {
+        int contadorLivre = 0;
+        for (int i = 0; i < contatos.length; i++) {
+            if (contatos == null) {
+                contadorLivre++;
+            }
+        }
+        return contadorLivre;
     }
 }
