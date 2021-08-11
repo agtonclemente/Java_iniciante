@@ -17,12 +17,12 @@ public class AgendaCont {
     }
     
     public void inserirContato(Contato c) {
-        boolean encotrou = false;
+        boolean encontrou = false;
         
         for(int i = 0; i < contatos.length && !encontrou; i++) {
             if(contatos[i] == null) {
                 contatos[i] = c;
-                encotrou = true;
+                encontrou = true;
                 
             }
         }
@@ -30,6 +30,39 @@ public class AgendaCont {
             System.out.println("Contato inserido");
         }else{
             System.out.println("Contato não inserido");
+        }       
+    }
+    
+    public boolean existeContato (Contato c) {
+        for (int i = 0; i < contatos.length; i++) {
+            if (contatos[i] != null && c.iguais(contatos[i])) {
+                contatos[i] = c;
+                return true;
+            }
+        }
+        
+        return false;
+    }
+    
+    public void listaContatos() {
+        for (int i = 0; i < contatos.length; i++) {
+            if (contatos[i] != null) {
+                System.out.println(contatos[i]);
+            }
+        }
+    }
+    
+    public void buscarPorNome (String nome) {
+        boolean encontrou = false;
+        for (int i = 0; i < contatos.length && !encontrou; i++) {
+            if (contatos[i] != null && contatos[i].getNome().equalsIgnoreCase(nome)) {
+                System.out.println("Telefone " + contatos[i].getTelefone());
+                encontrou = true;
+            }
+        }
+        
+        if (!encontrou) {
+            System.out.println("não se encontrou o contato.");
         }
     }
 }

@@ -45,7 +45,7 @@ public class Teste {
                     break;
                     default:System.out.println("Insira números entre 1 e 7 ");
                 }
-                
+            }
                 catch (Exception e) {
                         System.out.println("Insira um número: ");
                         scan.next();
@@ -60,4 +60,4 @@ public class Teste {
         
     }
     
-}
+
