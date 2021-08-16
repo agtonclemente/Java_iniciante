@@ -1,6 +1,8 @@
 //Classe_Contato_Da_Agenda
 package Contato;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author agton
@@ -16,11 +18,15 @@ public class AgendaCont {
         this.contatos = new Contato[tamanho];
     }
     
+    public Contato[] getContatos() {
+        return contatos;
+    }
+    
     public void inserirContato(Contato c) {
         if (existeContato(c)) {
-            System.out.println("Já existe esse nome na agenda");
+            JOptionPane.showMessageDialog(null, "Já existe esse nome na agenda");
         }else if (agendaCheia()) {
-            System.out.println("Agenda cheia, não se pode inserir");
+            JOptionPane.showMessageDialog(null, "Agenda cheia, não se pode inserir");
         }else{
         boolean encontrou = false;
         
@@ -32,9 +38,9 @@ public class AgendaCont {
             }
         }
         if(encontrou) {
-            System.out.println("Contato inserido");
+            JOptionPane.showMessageDialog(null, "Contato inserido");
         }else{
-            System.out.println("Contato não inserido");
+            JOptionPane.showMessageDialog(null, "Contato não inserido");
         }       
     }
     }
@@ -52,7 +58,7 @@ public class AgendaCont {
     public void listaContatos() {
         for (int i = 0; i < contatos.length; i++) {
             if (contatos[i] != null) {
-                System.out.println(contatos[i]);
+                JOptionPane.showMessageDialog(null, contatos[i]);
             }
         }
     }
@@ -61,13 +67,13 @@ public class AgendaCont {
         boolean encontrou = false;
         for (int i = 0; i < contatos.length && !encontrou; i++) {
             if (contatos[i] != null && contatos[i].getNome().equalsIgnoreCase(nome)) {
-                System.out.println("Telefone " + contatos[i].getTelefone());
+                JOptionPane.showMessageDialog(null, "Telefone " + contatos[i].getTelefone());
                 encontrou = true;
             }
         }
         
         if (!encontrou) {
-            System.out.println("não se encontrou o contato.");
+            JOptionPane.showMessageDialog(null, "não se encontrou o contato.");
         }
     }
     
@@ -91,9 +97,9 @@ public class AgendaCont {
         boolean encontrou = false;
         
         if (encontrou) {
-            System.out.println("Contato eliminado");
+            JOptionPane.showMessageDialog(null, "Contato eliminado");
         }else{
-            System.out.println("Contato não eliminado");
+            JOptionPane.showMessageDialog(null, "Contato não eliminado");
         }
     }
     

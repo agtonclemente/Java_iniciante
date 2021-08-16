@@ -43,17 +43,43 @@ public class Teste {
                         agenda.inserirContato(c);
                     break;
                     case 2:
+                        agenda.listaContatos();
                     break;
                     case 3:
+                        System.out.println("Nome: ");
+                        nome = scan.next();
+                        agenda.buscarPorNome(nome);
                     break;
                     case 4:
+                        System.out.println("Nome: ");
+                        nome = scan.next();
+                        c = new Contato(nome, 0);
+                        if (agenda.existeContato(c)) {
+                            System.out.println("O contato não existe.");
+                        }else{
+                            System.out.println("O contato existe.");
+                        }
                     break;
                     case 5:
+                        System.out.println("Nome: ");
+                        nome = scan.next();
+                        c = new Contato(nome);
+                        agenda.eliminarContato(c);
                     break;
                     case 6:
+                        System.out.println("Existem " +agenda.espacoLivre() + "espaços livres: ");
                     break;
-                    case 7: 
+                    case 7:
+                        if (agenda.agendaCheia()) {
+                            System.out.println("A agenda está cheia.");
+                        }else{
+                            System.out.println("Ainda pode inserir contatos.");
+                        }
+                        //agenda.agendaCheia();
                     break;
+                    case 8:
+                        sair = true;
+                    break;    
                     default:System.out.println("Insira números entre 1 e 7 ");
                 }
             }

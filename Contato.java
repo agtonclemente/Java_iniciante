@@ -17,6 +17,10 @@ public class Contato {
         this.telefone = telefone;
     }
 
+    Contato(String nome) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
     public int getTelefone() {
         return telefone;
     }
