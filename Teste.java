@@ -1,5 +1,5 @@
 
-package MinhathreadRunnable;
+package polimorfismo;
 
 /**
  *
@@ -7,15 +7,16 @@ package MinhathreadRunnable;
  */
 public class Teste {
 
-    
     public static void main(String[] args) {
-        MinhaThreadRunnable thread1 = new MinhaThreadRunnable("#1", 900);
+        Mulher m1 = new Mulher();
+        Pessoa.falar(m1);
         
-        Thread t1 = new Thread(tread);
-        t1.start();
+        Homem h1 = new Homem();
+        Pessoa.falar(h1);
         
-        MinhaThreadRunnable thread2 = new MinhaThreadRunnable("#2", 650);
-        MinhaThreadRunnable thread3 = new MinhaThreadRunnable("#3", 700)
+        Crianca c = new Crianca();
+        Pessoa.falar(c);
+        
         
     }
     
