@@ -4,4 +4,6 @@ Neste repositório vou subindo ⬆️ os projetos do curso de Java para iniciant
 Nova tualização do exercício de **Java HoraDoSistema**.
 Estou amando 💓 muito aprender **Java ☕**, linguagem **Poderosa!** 💥
 Pessoal este repositório está bombando! 💥
+***Já estou quase no fim do curso de Java Iniciante CINEL e estou muito feliz pelo conhecimento adquirido!***
+
 [CINEL](https://www.cinel.pt/appv2)
