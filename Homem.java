@@ -1,5 +1,7 @@
 
-package polimorfismo;
+package InterFaceEx;
+
+import polimorfismo.*;
 
 /**
  *

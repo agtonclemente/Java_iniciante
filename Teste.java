@@ -1,5 +1,5 @@
 
-package polimorfismo;
+package InterFaceEx;
 
 /**
  *
@@ -7,16 +7,24 @@ package polimorfismo;
  */
 public class Teste {
 
+    /**
+     * @param args the command line arguments
+     */
     public static void main(String[] args) {
-        Mulher m1 = new Mulher();
-        Pessoa.falar(m1);
+        Prato p1 = new Prato();
+        Pessoa.falar(p1);
         
-        Homem h1 = new Homem();
-        Pessoa.falar(h1);
+        Sobremesa s = new Sobremesa();
+        Pessoa.falar(s);
         
-        Crianca c = new Crianca();
-        Pessoa.falar(c);
-        
+         /*polimorfismo.Mulher m1 = new polimorfismo.Mulher();
+        polimorfismo.Pessoa.falar(m1);
+
+        polimorfismo.Homem h1 = new polimorfismo.Homem();
+        polimorfismo.Pessoa.falar(h1);
+
+        polimorfismo.Crianca c = new polimorfismo.Crianca();
+        polimorfismo.Pessoa.falar(c);*/
         
     }
     
