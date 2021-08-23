@@ -1,25 +1,45 @@
 //SuperClasse_Pessoa
-package InterFaceEx;
-
-import polimorfismo.*;
+package exeentregar;
 
 /**
  *
  * @author agton
  */
-public abstract class Pessoa implements Inter1{
+public abstract class Pessoa {
+    private String nome;
+    private int NIF;
 
-    static void falar(Prato p1) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public Pessoa() {
+    }
+    
+    
+
+    public Pessoa(String nome, int NIF) {
+        this.nome = nome;
+        this.NIF = NIF;
     }
 
-    static void falar(Sobremesa s) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public String getNome() {
+        return nome;
     }
-    public abstract void comunicar();
-    static void falar(Pessoa p) {
-        p.comunicar();
+
+    public void setNome(String nome) {
+        this.nome = nome;
     }
+
+    public int getNIF() {
+        return NIF;
+    }
+
+    public void setNIF(int NIF) {
+        this.NIF = NIF;
+    }
+
+    @Override
+    public String toString() {
+        return "Pessoa{" + "nome=" + nome + ", NIF=" + NIF + '}';
+    }
+    
     
     
 }
