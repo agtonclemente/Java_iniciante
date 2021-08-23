@@ -1,6 +1,8 @@
 
 package Ficheiros;
 
+import java.io.File;
+
 /**
  *
  * @author agton
@@ -9,16 +11,10 @@ public class Ficheiro {
 
    
     public static void main(String[] args) {
-        String nomeFicheiro = new "C:\\teste.txt";
-        System.out.println(ficheiro);
+        String nomeFicheiro = "C:" + File.pathSeparator + "teste.txt";
         
-        Ficheiro fich = Ficheiro(nomeFicheiro);
-       
-        try {
-             fich.createNewFile();
-        } catch (Exception e) {
-            System.out.println("erro" + fich.getPath());
-        }
+        File fich = new File(nomeFicheiro);
+        System.out.println(nomeFicheiro + "existe?" + fich.exists());
         
     }
     
